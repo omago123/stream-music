@@ -36,8 +36,11 @@ Sales1 조직의 peer0 노드에서 체인코드 invoke 호출로 setMusic 기�
   peer chaincode query -o orderer.acornpub.com:7050 -C channelsales1 -n music-cc -c '{"function":"getWallet","Args":["1Q2W3E4R"]}'
   
   peer chaincode query -o orderer.acornpub.com:7050 -C channelsales1 -n music-cc -c '{"function":"getWallet","Args":["5T6Y7U8I"]}'
+  
+  ![image](https://user-images.githubusercontent.com/73014464/140742386-b5d945f1-ba3e-4d94-b788-bb57406bdb44.png)
 
-  ![image](https://user-images.githubusercontent.com/73014464/140742212-dc55c1ce-8f15-4a2a-bf44-2350f23d03ec.png)
+
+  
 
  
  
