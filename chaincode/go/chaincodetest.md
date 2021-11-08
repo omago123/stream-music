@@ -1,7 +1,7 @@
 
 
 Sales1 조직의 peer0 노드에서 Go 체인코드 설치
-# peer chaincode install -l golang -n music-cc -v 1.0 -p chaincode/go
+'#' peer chaincode install -l golang -n music-cc -v 1.0 -p chaincode/go
 
 Sales1 조직의 peer0 노드에서 체인코드 인스턴스화
 #  peer chaincode instantiate -o orderer.acornpub.com:7050 -C channelsales1 -n music-cc -v 1.0 -c '{"Args":[""]}' -P "OR ('Sales1Org.member')"
