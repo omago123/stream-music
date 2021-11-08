@@ -36,6 +36,7 @@ func main() {
 	if err != nil {
 		fmt.Printf("Error starting Simple chaincode: %s", err)
 	}
+
 }
 
 func (s *SmartContract) Init(APIstub shim.ChaincodeStubInterface) pb.Response {
@@ -187,7 +188,7 @@ func (s *SmartContract) getAllMusic(APIstub shim.ChaincodeStubInterface) pb.Resp
 	json.Unmarshal(musickeyAsBytes, &musickey)
 	idxStr := strconv.Itoa(musickey.Idx + 1)
 
-	var startKey = "MSO"
+	var startKey = "MS0"
 	var endKey = musickey.Key + idxStr
 	fmt.Println(startKey)
 	fmt.Println(endKey)
