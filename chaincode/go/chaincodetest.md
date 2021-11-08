@@ -19,7 +19,7 @@ Sales1 조직의 peer0 노드에서 체인코드 invoke 호출로 initWallet 기
 
 Sales1 조직의 peer0 노드에서 체인코드 invoke 호출로 setMusic 기능 처리
 
--판매자 Hyper가 음원 Ledger를 20원의 토큰으로 등록하는 체인코드 실행
+- 판매자 Hyper가 음원 Ledger를 20원의 토큰으로 등록하는 체인코드 실행
 
  peer chaincode invoke -o order.acornpub.com:7050 -C channelsales1 -n music-cc -c '{"function":"setMusic","Args":["Fabric", "Hyper", "20", "1Q2W3E4R"]}'
  
