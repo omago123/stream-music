@@ -19,7 +19,7 @@ Sales1 조직의 peer0 노드에서 체인코드 invoke 호출로 initWallet 기
 
 Sales1 조직의 peer0 노드에서 체인코드 invoke 호출로 setMusic 기능 처리
 
-판매자 Hyper가 음원 Ledger를 20원의 토큰으로 등록하는 체인코드 실행
+-판매자 Hyper가 음원 Ledger를 20원의 토큰으로 등록하는 체인코드 실행
 
  peer chaincode invoke -o order.acornpub.com:7050 -C channelsales1 -n music-cc -c '{"function":"setMusic","Args":["Fabric", "Hyper", "20", "1Q2W3E4R"]}'
  
@@ -27,11 +27,15 @@ Sales1 조직의 peer0 노드에서 체인코드 invoke 호출로 setMusic 기�
  
  Sales1 조직의 peer0 노드에서 체인코드 invoke 호출로 purchaseMusic 기능 처리
  
+ - 구매자 Ledger가 음원 Fabric을 구입하는 체인코드를 실행 음원의 ID는 MS0이고 판매자의 ID는 1Q2W3E4R
+ 
   peer chaincode invoke -o orderer.acornpub.com:7050 -C channelsales1 -n music-cc -c '{"function":"purchaseMusic","Args":["5T6Y7U8I","MS0"]}'
  
  ![image](https://user-images.githubusercontent.com/73014464/140741733-ee1fb133-f961-4509-a6d1-c920b2729330.png)
  
  Sales1 조직의 peer0 노드에서 체인코드 query 호출로 getWallet 기능 처리
+ 
+ - 판매자 Hyper 구매자 Ledger의 토큰이 120,180으로 출력되며 자산의 이동이 잘 이뤄진 것을 확인 가능
  
   peer chaincode query -o orderer.acornpub.com:7050 -C channelsales1 -n music-cc -c '{"function":"getWallet","Args":["1Q2W3E4R"]}'
   
